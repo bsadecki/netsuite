@@ -20,6 +20,15 @@ describe NetSuite::Records::CashRefund do
     end
   end
 
+  it 'has all the right fields with specific classes' do
+    {
+      null_field_list: NetSuite::Records::NullFieldList,
+      billing_address: NetSuite::Records::Address
+    }.each do |field, klass|
+      expect(cashrefund).to have_field(field, klass)
+    end
+  end
+
   describe '#item_list' do
     it 'can be set from attributes' do
       attributes = {

@@ -82,6 +82,7 @@ module NetSuite
 
       field :item_list, CashRefundItemList
       field :custom_field_list, CustomFieldList
+      field :null_field_list, NullFieldList
       # partnersList	CashRefundPartnersList
       # salesTeamList	CashRefundSalesTeamList
 
